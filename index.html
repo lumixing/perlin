@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>perlin</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+	<script src="perlin.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="canvas">
+		<canvas id="canvas" width="512" height="512"></canvas>
+	</div>
+
+	<div class="config">
+		<form>
+			<div class="config-title">
+				<span>config</span>
+				<span title="not me!" style="color: #8b8b8b;">(hover for info)</span>
+			</div>
+
+			<div class="form" title="size of each cell in pixels">
+				<label for="cell-size">cell size: </label>
+				<input id="cell-size" name="cell-size" type="number" min="1" value="8" style="width: 3rem">
+				<span>px</span>
+			</div>
+
+			<div class="form" title="seed for perlin noise generation">
+				<label for="seed">seed: </label>
+				<input id="seed" name="seed" type="number" placeholder="blank for random" style="width: 10rem">
+			</div>
+
+			<div class="form" title="offset perlin noise position for the x axis">
+				<label for="x-offset">x offset: </label>
+				<input id="x-offset" name="x-offset" type="number" value="0" step="0.1" style="width: 3rem">
+			</div>
+
+			<div class="form" title="offset perlin noise position for the y ayis">
+				<label for="y-offset">y offset: </label>
+				<input id="y-offset" name="y-offset" type="number" value="0" step="0.1" style="width: 3rem">
+			</div>
+
+			<div class="form" title="z position for perlin noise since it's 3D">
+				<label for="z-value">z value: </label>
+				<input id="z-value" name="z-value" type="number" value="0" step="0.1" style="width: 3rem">
+			</div>
+
+			<div class="form" title="zoom multiplier for viewing perlin noise">
+				<label for="zoom">zoom: </label>
+				<input id="zoom" name="zoom" type="number" value="10" step="1" style="width: 3rem">
+			</div>
+
+			<div class="form"
+				title="number between 0 and 1 which determines what color is a pixel based on the perlin noise value">
+				<label for="threshold">threshold: </label>
+				<input id="threshold" name="threshold" type="number" value="0.5" step="0.01" style="width: 3rem">
+			</div>
+
+			<div class="form" title="color for pixels with perlin noise value below threshold">
+				<label for="color-1">color 1: </label>
+				<input id="color-1" name="color-1" type="color" value="#ffffff">
+			</div>
+
+			<div class="form" title="color for pixels with perlin noise value above threshold">
+				<label for="color-2">color 2: </label>
+				<input id="color-2" name="color-2" type="color" value="#000000">
+			</div>
+
+			<div class="submit">
+				<input type="submit">
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
